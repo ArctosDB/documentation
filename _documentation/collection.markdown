@@ -85,7 +85,7 @@ An internal license is a legally-binding document which applies to data download
 
 Foreign key to [https://arctos.database.museum/info/ctDocumentation.cfm?table=ctdata_license](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctdata_license). 
 
-An external license is a legally-binding document which applies to data downloaded outside Arctos (eg, DWC Portals). Data from these sources are generally incomplete, are often dated, and should be used with caution.
+An external license is a legally-binding document which applies to data shared outside or Arctos, for example through DarwinCore. Data which has been through this process are less-complete and less-connected than data from Arctos, and a less-stringent license may be appropriate. Re-using the internal license here is also fully acceptable. Note that some "portals" have license requirements, and may refuse to publish date which does not meet those requirements. Example: [GBIF Terms of Use](https://www.gbif.org/terms)
 
 
 ### collection_terms_id
