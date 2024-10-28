@@ -21,10 +21,14 @@ There is a generic record entry form provided as part of the Arctos UI.
 
 ### Record Bulkloader
 
+## Documentation
+
+Documentation is provided as a Google Sheet: [https://docs.google.com/spreadsheets/d/1VbNC3k17WAHMum_qD5UYoXxUUWwXXh5gZSM5vfGvRzU](https://docs.google.com/spreadsheets/d/1VbNC3k17WAHMum_qD5UYoXxUUWwXXh5gZSM5vfGvRzU)
+
 ## Possibilities
 
 Various points of expansion have been discussed, or are available but not used.
 
 ## Edit this Documentation
 
-If you see something that needs to be edited in this document, you can create an issue using the link under the search widget at the top left side of this page, or you can edit directly <a href="https://github.com/ArctosDB/documentation-wiki/edit/gh-pages/_how_to/data_entry.markdown" target="_blank">here</a>.
+If you see something that needs to be edited in this document, you can create an issue using the link under the search widget at the top left side of this page, or you can edit directly [here](https://github.com/ArctosDB/documentation-wiki/edit/gh-pages/_how_to/data_entry.markdown).
