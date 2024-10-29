@@ -1,5 +1,5 @@
 ---
-title: Record Data Entry
+title: Data Entry
 layout: default_toc
 author: DLM
 date: 2024-10-28
