@@ -23,6 +23,8 @@ There is a generic record entry form provided as part of the Arctos UI.
 
 ### Record Bulkloader
 
+There is a well-developed bulkloader ecosystem with many tools, checks, cleanups, custom template building, etc.
+
 ## Documentation
 
 Documentation is provided as a Google Sheet: [https://docs.google.com/spreadsheets/d/1VbNC3k17WAHMum_qD5UYoXxUUWwXXh5gZSM5vfGvRzU](https://docs.google.com/spreadsheets/d/1VbNC3k17WAHMum_qD5UYoXxUUWwXXh5gZSM5vfGvRzU)
