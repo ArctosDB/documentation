@@ -29,6 +29,36 @@ Documentation is provided as a Google Sheet: [https://docs.google.com/spreadshee
 
 Various points of expansion have been discussed, or are available but not used.
 
+### API
+
+The loader has been implemented as an API (albeit one primarily intended for local consumption, an easy state to change) for well over a decade; authorities are available from the API. Developing a local tool that directly interacts with Arctos should be straightforward.
+
+### Multiple Entry Forms
+
+[issue](https://github.com/orgs/ArctosDB/discussions/8052) - there's been inconclusive discussion about having more than one entry form, possibly it/they could have baked-in rules that differ from the global form
+
+### Collection-specific rules
+
+
+[issue](https://github.com/orgs/ArctosDB/discussions/4384)  - there have been also-inconclusive discussions about adding 'when collection then....' types of rules to the bulk checker.
+
+### Fancy-up the one shared form
+
+
+[issue](https://github.com/orgs/ArctosDB/discussions/7560) - Dynamically Highlight Required Data Entry Fields is a request for UI rules in the shared form.
+
+
+### Implement warnings
+
+(no issue) - the checks currently return text, and anything other than NULL is considered a fail. PostgreSQL elegantly supports JSON, and adding warnings to the check ("Most collections of this type don't do that....") would be relatively trivial. Implementing this in a primarily-bulk ecosystem would require planning.
+
+### Mix-n-Match
+
+Following multiple options - e.q., lots of forms all with increased complexity - would probaly require additional resources.
+
+
+
+
 ## Edit this Documentation
 
 If you see something that needs to be edited in this document, you can create an issue using the link under the search widget at the top left side of this page, or you can edit directly [here](https://github.com/ArctosDB/documentation-wiki/edit/gh-pages/_how_to/data_entry.markdown).
