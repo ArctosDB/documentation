@@ -1,6 +1,8 @@
 ---
 title: How To Find and Edit Loans
 layout: default_toc
+author: MK
+date: 2024-11-12
 ---
 [Loan Documentation](https://handbook.arctosdb.org/documentation/loans.html)
 
@@ -8,9 +10,9 @@ layout: default_toc
 
 ## Finding Loans
 
-Use the Arctos drop-down menus to select **Manage Data > Transactions > Find Loan**
+Use the Arctos drop-down menus to select **Tools Directory > Accessions, Loans, Permits tile > [Loan: Search](https://arctos.database.museum/Loan.cfm)**
 
-To find loans that have not been closed (i.e., active loans), click the button on the right side of this page titled: **Find all loans that are not ‘closed'**.  Otherwise, use the options on the left side of the screen to search for loans by collection, recipients, etc.
+To find all overdue loans, click the button on the top of the page called: **Fill: Overdue Loans** to autopopulate the date and search terms.  Otherwise, use the options to search for loans by collection, recipients, terms etc.
 
 When finished, click the “Find Loans” button and a new page will appear with a list of search results. To view loan details, click “Review Items”. 
 
