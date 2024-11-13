@@ -113,6 +113,34 @@ This data structure is suitable for any agents acting in any "[role](https://arc
 
 When ["bad duplicate of"](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctagent_relationship#bad_duplicate_of) agents are merged, [verbatim agent](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctattribute_type#verbatim_agent) Attributes for [collector roles](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctcollector_role) are automatically created for all affected catalog records.
 
+# Database Rules
+
+Some database rules and suggestions exist in an attempt to provide some consistency and avoid the most obvious duplicates and ways of hiding data.
+
+* bot agents may only be created by scripts, and edit attempts may result in account lock
+* preferred names cannot contain extraneous spaces or nonprinting characters
+* Person-agents should not have commas in prefered name
+* Periods must be followed by spaces in preferred name
+* Person agents may not have a space after uppercase letters in preferred name
+* Non-person agents should not have first name, middle name, or last name
+* Attributes used in shipments may not change type or value, nor be deprecated
+* HTML is not allowed in agent attributes. Markdown is acceptable for some types.
+* Begin date cannot be after end date
+* Determined date, determiner, and method are required for bad duplicate of relationships
+* Relationship-forming attributes must be accompanied by related agent
+* Identifiers and email must be unique
+* Names of type first, middle and last that are a single letter require a period following them
+* Events must have begin or end dates
+* addresses must be properly typed
+  * GitHub (and only GitHub) format: '^https://github.com\/[a-zA-Z0-9\-]+$'
+  * Library of Congress (and only Library of Congress) format: 'https:\/\/lccn\.loc.gov\/[-a-zA-Z0-9]{6,12}'
+  * ORCID (and only ORCID) format: '^https:\/\/orcid.org\/[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9X]{4}$'
+  * Wikidata (and only Wikidata) format: '^https://www.wikidata.org/wiki\/Q[0-9]{1,12}[\/]?$'
+  * collectionID (and only collectionID) format: 'https://arctos.database.museum/collection/%'
+  * url format must be URL, and cannot be a search result
+  * phone,work phone,fax,mobile phone must be valid phone numbers
+  * email,notification email ust be email addresses
+
 # How To
 
 Instructions for doing specifc tasks related to Agents in Arctos
