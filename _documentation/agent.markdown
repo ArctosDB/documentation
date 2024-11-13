@@ -139,7 +139,7 @@ Some database rules and suggestions exist in an attempt to provide some consiste
   * collectionID (and only collectionID) format: 'https://arctos.database.museum/collection/%'
   * url format must be URL, and cannot be a search result
   * phone,work phone,fax,mobile phone must be valid phone numbers
-  * email,notification email ust be email addresses
+  * email,notification email must be email addresses
 
 # How To
 
