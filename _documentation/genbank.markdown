@@ -28,10 +28,6 @@ In any case, the GenBank accession numbers should be entered into Arctos
 and Other IDs of type GenBank, and doing so will form HTTP links to
 GenBank from the specimen detail page.
 
-# Arctos Tools
-
-Arctos provides tools to compile data for GenBank submission. Selecting specimens by barcode will send <code>source_material_id</code> in addition to the GUID, providing a link to the specific material used. 
-
 # Historical Document
 
 In an effort to lock down the abbreviations with which we are familiar,
