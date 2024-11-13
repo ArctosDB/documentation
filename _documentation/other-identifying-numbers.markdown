@@ -32,7 +32,7 @@ ID Issued By is the Agent issuing the identifier. "Issuing" may involve any proc
 
 ## ID Assigned By
 
-ID Assigned By is the Agent assigning the identifier to a catalog record. Note that some identifiers my be assigned by bot agents, and these should receive extra scrutiny. This information is generally extracted from the user's environment rather than being asserted.
+ID Assigned By is the Agent assigning the identifier to a catalog record. Note that some identifiers may be assigned by bot agents, and these should receive extra scrutiny. This information is generally extracted from the user's environment rather than being asserted.
 
 ## assigned_date
 
