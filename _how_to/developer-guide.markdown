@@ -35,15 +35,12 @@ DLM's weapon of choice
 
 #### Atom
 
-#### Brackets
-A CFML Support - ColdFusion 11 extension is available for <a href="http://brackets.io/" target="_blank" class="external">Brackets</a>. 
+## Component Loaders
 
+(ref: https://github.com/ArctosDB/dev/issues/110)
 
-#### Eclipse
-The CFEclipse plugin is currently not supported and older versions may not be from reliable sources.
-The Eclipse and CFEclipse can be downloaded by following the instructions at <a href="https://github.com/cfeclipse/cfeclipse/wiki/Installing-CFEclipse" target="_blank" class="external">Installing CFEclipse</a>. We suggest using the <a href="https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2020-09/R/eclipse-inst-jre-win64.exeEclipse" target="_blank" class="external">IDE for Web and JavaScript Developers</a> as recommended in the instructions. **NOTE** this was not functioning properly as of December 1, 2020.
-
-
+* all user-supplied fields should be text, which is more portable. Handlers must check and cast.
+* 
 ## Datasource
 
 Arctos uses various datasources for various reasons. Most queries should be one of two entries:
@@ -137,25 +134,7 @@ BANNER/LOGIN Terms box
 
 ## Logos
 
-BLUE
-
-* Single bear logo
-![logo-bear_only](https://user-images.githubusercontent.com/11336485/211899289-641c6d4f-b3fb-45b9-a551-2cca4ba2aa71.png)
-
-* Arctos text bear logo![logo-bear_Arctos](https://user-images.githubusercontent.com/11336485/211899409-171d846b-408b-468b-bd8b-fec3289665fc.png)
-
-* Arctos full text logo![Logo-full_text](https://user-images.githubusercontent.com/11336485/211899558-fe4d2e8d-884f-4c84-9a34-49b34f7c4365.png)
-* Arctos full text logo - resized for header![Logo-full_text_resized](https://user-images.githubusercontent.com/11336485/213191330-667b6ff0-563a-4cc5-83f0-a60af4e331ef.png)
-
-
-
-BLACK
-
-* Arctos full text logo ![Arctos-logo_black_xbg-01](https://user-images.githubusercontent.com/11336485/211899858-f7e7ea42-f246-4fff-b2ad-039002795aa6.png)
-
-WHITE
-
-* Arctos full text logo![Arctos-logo_white_xbg-01 (1)](https://user-images.githubusercontent.com/11336485/211899783-1fade03c-f5e4-42e9-ada9-5167e48e7f4c.png)
+Logos are in the images folder of the /ArctosDB/arctos-assets/ repository.
 
 ## IPT Mapping
 
