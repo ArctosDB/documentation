@@ -39,8 +39,15 @@ DLM's weapon of choice
 
 (ref: https://github.com/ArctosDB/dev/issues/110)
 
-* all user-supplied fields should be text, which is more portable. Handlers must check and cast.
-* 
+* all user-supplied fields should be text, which is more portable. Handlers must check and cast as appropriate.
+
+
+## Identifier Convention
+
+* internal identifiers are primary keys or tables, are integers, and should be named ``something_id``
+* GUIDs are generally primary keys made GUID-ish, begind with ``https://arctos.database.museum/``, and should be referred to as ``somethingID`` (Note that DDL is not case sensitive and case will often be lost.)
+* "DWC Triplets" ("local" record identifiers still widely referred to as GUID) should be referred to as "triplet" when reluctantly used. (See also https://github.com/orgs/ArctosDB/discussions/5310)
+
 ## Datasource
 
 Arctos uses various datasources for various reasons. Most queries should be one of two entries:
