@@ -1,6 +1,6 @@
 ---
 title: Bulkloader
-author: Dusty L. McDonald, Teresa J. Mayfield-Meyer
+author: Dusty L. McDonald, Teresa J. Mayfield-Meyer, Michelle Koo
 layout: default_toc
 ---
 
@@ -25,11 +25,11 @@ to build a file in the bulkloading format.
 
 ## Columns and Documentation
 
-Documentation is provided as a Google Sheet:
 
-[https://docs.google.com/spreadsheets/d/1VbNC3k17WAHMum_qD5UYoXxUUWwXXh5gZSM5vfGvRzU/edit#gid=529334279](https://docs.google.com/spreadsheets/d/1VbNC3k17WAHMum_qD5UYoXxUUWwXXh5gZSM5vfGvRzU/edit#gid=529334279)
 
-Make sure to check the tabs for additional information!
+[Updated Bulkloader fields and definitions for columns, status messages, taxonomic identification formulas and event types are available in a spreadsheet](https://docs.google.com/spreadsheets/d/1VbNC3k17WAHMum_qD5UYoXxUUWwXXh5gZSM5vfGvRzU/edit?usp=sharing)
+
+(Make sure to check the tabs for all the information!)
 
 
 

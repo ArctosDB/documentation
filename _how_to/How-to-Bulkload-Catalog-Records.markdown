@@ -1,10 +1,10 @@
 ---
 title: How To Bulkload Catalog Records
 layout: default_toc
-author: Carla Cicero, Teresa J. Mayfield-Meyer
-date: 2022-04-23
+author: Teresa J. Mayfield-Meyer, Michelle Koo
+date: 2024-11-25
 ---
-
+Relevant Documentation:
 [Bulkloader Documentation](https://handbook.arctosdb.org/documentation/bulkloader.html)
 
 [Catalog Record/Data Entry Documentation](https://handbook.arctosdb.org/documentation/catalog.html)
@@ -13,15 +13,21 @@ date: 2022-04-23
 
 #### Navigation: [Tools Directory > Enter Data > Bulkload Catalog Records](https://arctos.database.museum/Bulkloader/BulkloadSpecimens.cfm)
 
-If you do not have a Bulkload Catalog Record Data sheet, begin with the [Bulkload Builder](https://arctos.database.museum/Bulkloader/bulkloaderBuilder.cfm).
+What you need to know: Bulkloading records into Arctos happens in two database steps, not including the steps to prepare your file for uploading. First step is loading your prepared file into the Staging Table. This is a shared resource currently, so if a user has data in the table it is unavailable until it has been pushed to the second step (see Bulkloading Table). This step is meant to be a temporary holding stage for primary data validation.
 
-## Bulkload Builder
+Please read the Staging Table etiquette on the database page. 
+
+
+
+## Bulkload Builder - Pre-uploading stage
 
 #### Navigation: [Tools Directory > Enter Data > Bulkload Builder](https://arctos.database.museum/Bulkloader/bulkloaderBuilder.cfm)
 
-The first small table includes groups of fields available to use. Select which ones you want to save time on selecting individual fields in the larger table below.
+If you do not have a Bulkload Catalog Record Data sheet, begin with the [Bulkload Builder](https://arctos.database.museum/Bulkloader/bulkloaderBuilder.cfm).
 
-From the larger table, you will see the fields that were selected as part of the groups selected above. 
+The first section includes groups of fields available to use. Select which ones you want to save time on selecting individual fields in the larger table below.
+
+In the next section, you will see the fields that were selected as part of the groups selected above. 
 
 If there are fields that will never be used by your collection and therefore do not need to be in your file. **Unselect** them.  
 
@@ -63,11 +69,11 @@ When trying to fill a gap in the available catalog numbers, it is wise to view w
 * South Africa is your new best friend because they have the date format that you need. Select “yyyy-mm-dd” format and click ok.
 * Your highlighted cell(s) should automatically change to Arctos date format. **Woot!**
 
-For informationa about required data and individual fields, see [How To Enter Data for a Single Record: Data Entry Details](https://handbook.arctosdb.org/how_to/How-to-Enter-Data-for-a-Single-Record.html#data-entry-form-details
+For information about required data and individual fields, see [How To Enter Data for a Single Record: Data Entry Details](https://handbook.arctosdb.org/how_to/How-to-Enter-Data-for-a-Single-Record.html#data-entry-form-details)
 
-### Before Bulkloading    
+### Step 1: Staging Table    
 
-At the bulkloading page, just above where you will click to choose your file to upload, Arctos will tell you if the bulkloader is currently being used.
+On the bulkloading page, just above where you will click to choose your file to upload, Arctos will tell you if the bulkloader is currently being used.
 * **“There is nothing in the staging table. You are free to proceed”**
 * The bulkloader is a shared resource that can only be accessed by one user at a time. If another institution is bulkloading, this page will tell you who is using it and show their contact information (if they have any).
 * If you are using the bulkloader, your name and contact information will be shown and will remain there if you do not clear the staging table after you are done. If you forget to delete your data from the staging table, you may end up getting some emails from other institutions asking when you will be done.
@@ -84,10 +90,19 @@ At the bulkloading page, just above where you will click to choose your file to 
 * Your data should now be in the bulkloader awaiting approval.
 
  ***IMPORTANT: DELETE YOUR DATA FROM THE STAGING TABLE***
-
+ 
+ # Step 2: Bulkloading Table
+ 
+ Once you have successfully pushed your data to the Bulkloading Table, proceed to [Browse and Edit page](https://arctos.database.museum/Bulkloader/browseBulk.cfm) where you can filter for your latest uploaded records. The status will tell you if further edits are required before loading, or if blank, you can set to ```autoload``` for record creation. 
+ 
+ Note: Access to this table is different than Step 1.
+ 
+ 
+<!--
 ## How to Bulkload Data Tutorial Video
 
 [![YouTube: How to Bulkload Data](https://raw.githubusercontent.com/ArctosDB/documentation-wiki/gh-pages/tutorial_images/How_to_Bulkload_Data_thumb.jpg)](https://youtu.be/2ehyZqS_C3Q)
+-->
 
 ## Edit this Documentation
 
