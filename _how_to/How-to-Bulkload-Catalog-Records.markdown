@@ -91,7 +91,7 @@ On the bulkloading page, just above where you will click to choose your file to 
 
  ***IMPORTANT: DELETE YOUR DATA FROM THE STAGING TABLE***
  
- # Step 2: Bulkloading Table
+# Step 2: Bulkloading Table
  
  Once you have successfully pushed your data to the Bulkloading Table, proceed to [Browse and Edit page](https://arctos.database.museum/Bulkloader/browseBulk.cfm) where you can filter for your latest uploaded records. The status will tell you if further edits are required before loading, or if blank, you can set to ```autoload``` for record creation. 
  
@@ -106,4 +106,4 @@ On the bulkloading page, just above where you will click to choose your file to 
 
 ## Edit this Documentation
 
-If you see something that needs to be edited in this document, you can create an issue using the link under the search widget at the top left side of this page, or you can edit directly <a href="https://github.com/ArctosDB/documentation-wiki/edit/gh-pages/_how_to/How-to-Bulkload-Specimen-Data.markdown" target="_blank">here</a>.
+If you see something that needs to be edited in this document, you can create an issue using the link under the search widget at the top left side of this page, or you can edit directly <a href="https://github.com/ArctosDB/documentation-wiki/edit/gh-pages/_how_to/How-to-Bulkload-Catalog-Records.markdown" target="_blank">here</a>.
