@@ -5,9 +5,7 @@ author: Michelle Koo
 date: 2024-11-25
 ---
 Relevant Documentation:
-
 [Bulkloader Documentation](https://handbook.arctosdb.org/documentation/bulkloader.html)
-
 [Catalog Record/Data Entry Documentation](https://handbook.arctosdb.org/documentation/catalog.html)
 
 # How to Bulkload Catalog Records
