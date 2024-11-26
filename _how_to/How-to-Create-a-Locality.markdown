@@ -2,7 +2,7 @@
 title: How To Create a Locality
 layout: default_toc
 author: Teresa J. Mayfield-Meyer, updated Michelle Koo
-date: 2019-11-25, updated 2024-09-07
+date: 2024-09-07
 ---
 [Locality Documentation](https://handbook.arctosdb.org/documentation/locality.html)
 
