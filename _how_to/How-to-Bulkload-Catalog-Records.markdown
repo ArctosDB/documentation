@@ -1,22 +1,20 @@
 ---
 title: How To Bulkload Catalog Records
 layout: default_toc
-author: Teresa J. Mayfield-Meyer, Michelle Koo
+author: Michelle Koo
 date: 2024-11-25
 ---
 Relevant Documentation:
+
 [Bulkloader Documentation](https://handbook.arctosdb.org/documentation/bulkloader.html)
 
 [Catalog Record/Data Entry Documentation](https://handbook.arctosdb.org/documentation/catalog.html)
 
 # How to Bulkload Catalog Records
 
-#### Navigation: [Tools Directory > Enter Data > Bulkload Catalog Records](https://arctos.database.museum/Bulkloader/BulkloadSpecimens.cfm)
-
-What you need to know: Bulkloading records into Arctos happens in two database steps, not including the steps to prepare your file for uploading. First step is loading your prepared file into the Staging Table. This is a shared resource currently, so if a user has data in the table it is unavailable until it has been pushed to the second step (see Bulkloading Table). This step is meant to be a temporary holding stage for primary data validation.
+What you need to know: Bulkloading records into Arctos is an efficient way to organize and create multiple records in batches. The key to successful bulkloading  is properly preparing your CSV file (see *Bulkload Builder* below). Once your CSV file is ready, then there are two database steps. First step is loading your prepared file into the Staging Table. This is a shared resource currently, so if a user has data in the table it is unavailable until it has been pushed to the second step (see Bulkloading Table). This step is meant to be a temporary holding stage for primary data validation. If there are no errors, then the Second step is to push the data to  the Staging Table. 
 
 Please read the Staging Table etiquette on the database page. 
-
 
 
 ## Bulkload Builder - Pre-uploading stage
@@ -41,11 +39,11 @@ Now click on “Get CSV” located above the small table and below the large tab
 
 Be sure edited cells do not have an invisible lead or end, otherwise Arctos will reject it. 
 
-* You may notice the bulkload template has a large number of fields for parts, attributes, collector, etc. These are there only if you need them. You may or may not use them all and that is ok. They can be left blank or left out of the template.
+* The bulkload template has a large number of fields for parts, attributes, collector, etc. These are there only if you need them; these fields can be blank or omitted from the bulkload template. 
 
 ![](https://raw.githubusercontent.com/ArctosDB/documentation-wiki/gh-pages/tutorial_images/Bear%20Pro.jpg) **Pro Tips**
 
-* The bulkloader only allows for four part attributes per part. If you need to add more attributes, consider bulkloading the records without parts and then bulkloading parts with the Part Bulkload Tool. 
+* The bulkloader only allows loading four part attributes per part. If you need to add more attributes, consider bulkloading the records without parts and then bulkloading parts with the Part Bulkload Tool. 
 
 * **IT IS VERY HELPFUL TO HAVE THE SINGLE DATA ENTRY PAGE OPEN WHILE ENTERING DATA INTO THE BULKLOAD DATA SHEET.** 
 Much of the bulkloader works off of the single data sheet and many things are “text sensitive”, meaning Arctos will not accept your file if something does not already exist within Arctos (ie; agents, parts, attributes, etc) OR if something is spelled incorrectly. 
@@ -71,7 +69,11 @@ When trying to fill a gap in the available catalog numbers, it is wise to view w
 
 For information about required data and individual fields, see [How To Enter Data for a Single Record: Data Entry Details](https://handbook.arctosdb.org/how_to/How-to-Enter-Data-for-a-Single-Record.html#data-entry-form-details)
 
-### Step 1: Staging Table    
+# Uploading Your Data
+
+#### Navigation: [Tools Directory > Enter Data > Bulkload Catalog Records](https://arctos.database.museum/Bulkloader/BulkloadSpecimens.cfm)
+
+## Step 1: Staging Table    
 
 On the bulkloading page, just above where you will click to choose your file to upload, Arctos will tell you if the bulkloader is currently being used.
 * **“There is nothing in the staging table. You are free to proceed”**
@@ -87,15 +89,15 @@ On the bulkloading page, just above where you will click to choose your file to 
   * **“Just load these records”** - Moves the records to the “personal” bulkloader where your administrator can approve them like any other single data entry.
   * **“Cleanup”** – If you have last minute data that needs to be added or changed. Once you do that, go back and choose one of the two other choices. For practical purposes, choose “Just load these records”.
 * You will be brought to a new page that says, “Your records have been checked and are now in the table bulkloader and flagged as loaded=’BULKOADED RECORD’. A data administrator can un-flag and load them.” After that it will say in blue “please delete from the staging table”, click that then click “yep, delete away” and you are all set.
-* Your data should now be in the bulkloader awaiting approval.
+* Your data is now in the Bulkloading Table awaiting approval in Step 2.
 
  ***IMPORTANT: DELETE YOUR DATA FROM THE STAGING TABLE***
  
-# Step 2: Bulkloading Table
+## Step 2: Bulkloading Table
  
- Once you have successfully pushed your data to the Bulkloading Table, proceed to [Browse and Edit page](https://arctos.database.museum/Bulkloader/browseBulk.cfm) where you can filter for your latest uploaded records. The status will tell you if further edits are required before loading, or if blank, you can set to ```autoload``` for record creation. 
+ Once you have successfully pushed your data to the Bulkloading Table, proceed to [Browse and Edit page](https://arctos.database.museum/Bulkloader/browseBulk.cfm) where you can filter for your latest uploaded records. The status column will tell you if further edits are required before loading, or if blank, you can set to ```autoload``` for record creation. If there are errors, you can correct records in the in this Bulkloading Table prior to autoloading. 
  
- Note: Access to this table is different than Step 1.
+ Note: Permission to access this table is different than Step 1.
  
  
 <!--
