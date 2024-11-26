@@ -1,0 +1,24 @@
+---
+title: "SQL Cheats"
+layout: collection_index
+---
+<h1 class="page-heading">SQL Cheats</h1>
+
+
+<ul class="collection-list" data-path="{{page.path}}">
+  {% for collection in site.collections %}
+  <!-- {{ collection.label }} -->
+    {% if page.path contains collection.label %}
+    <!-- {{ page.path }} does contain {{ collection.label }} -->
+    {% assign sorted_docs = (collection.docs | sort: 'title') %}
+      {% for doc in sorted_docs %}
+        <!-- Iterating on {{doc.title}} @ {{doc.url}} -->
+        {% unless doc.url contains "index" %}
+          <li>
+            <a class="collection-link" href="{{ doc.url | prepend: site.baseurl }}">{{ doc.title}}</a>
+          </li>
+        {% endunless %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</ul>
