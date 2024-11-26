@@ -14,10 +14,9 @@ Relevant Documentation:
 
 What you need to know: Bulkloading records into Arctos is an efficient way to organize and create multiple records in batches. The key to successful bulkloading  is properly preparing your CSV file (see *Bulkload Builder* below). Once your CSV file is ready, then there are two database steps. First step is loading your prepared file into the Staging Table. This is a shared resource currently, so if a user has data in the table it is unavailable until it has been pushed to the second step (see Bulkloading Table). This step is meant to be a temporary holding stage for primary data validation. If there are no errors, then the Second step is to push the data to  the Staging Table. 
 
-Please read the Staging Table etiquette on the database page. 
 
 
-## Bulkload Builder - Pre-uploading stage
+# Bulkload Builder - Pre-uploading stage
 
 #### Navigation: [Tools Directory > Enter Data > Bulkload Builder](https://arctos.database.museum/Bulkloader/bulkloaderBuilder.cfm)
 
@@ -75,14 +74,16 @@ For information about required data and individual fields, see [How To Enter Dat
 
 ## Step 1: Staging Table    
 
-On the bulkloading page, just above where you will click to choose your file to upload, Arctos will tell you if the bulkloader is currently being used.
-* **“There is nothing in the staging table. You are free to proceed”**
-* The bulkloader is a shared resource that can only be accessed by one user at a time. If another institution is bulkloading, this page will tell you who is using it and show their contact information (if they have any).
-* If you are using the bulkloader, your name and contact information will be shown and will remain there if you do not clear the staging table after you are done. If you forget to delete your data from the staging table, you may end up getting some emails from other institutions asking when you will be done.
+On the bulkloading page, read through the steps and etiquette, and scroll to the bottom of the page. You will either see a table with user information indicating that the staging table is in use or you will see the message "Upload a comma-delimited text file (csv)" with the Browse and Upload buttons.
+* The Staging Table is a shared resource that can only be accessed by one user at a time. If the Staging Table is in use the Browse and Upload buttons will not be available.
+* Instead the name and contact information of the user will be shown and will remain there until it is free and available. If you forget to delete your data from the staging table, you may end up getting some emails from other institutions asking when you will be done.
+
+Please read the *Staging Table etiquette* on the upload form. 
+
 
 ### Ready to Bulkload    
 
-* Choose your file and click “Upload this file”. 
+* Browse to your file and click “Upload this file”. 
 * You will be brought to a page that says “There are (#) records in the staging table. They have not been checked or processed yet”. (#- the number of records you are trying to upload).
 * From here you will choose from the following choices; Check and load these records, just load these records, or cleanup.
   * **“Check and load these records”** - By-passes the need for the records to go into the bulkloader where they would normally be looked over by an administrator.
