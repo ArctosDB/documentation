@@ -94,7 +94,7 @@ Please read the *Staging Table etiquette* on the upload form.
  
 ## Step 2: Bulkloading Table
  
- Once you have successfully pushed your data to the Bulkloading Table, proceed to [Browse and Edit page](https://arctos.database.museum/Bulkloader/browseBulk.cfm) where you can filter for your latest uploaded records. The status column will tell you if further edits are required before loading, or if blank, you can set to ```autoload``` for record creation. If there are errors, you can correct records in the in this Bulkloading Table prior to autoloading. 
+ Once you have successfully pushed your data to the Bulkloading Table, proceed to [Browse and Edit page](https://arctos.database.museum/Bulkloader/browseBulk.cfm) where you can filter for your latest uploaded records. The status column will tell you if further edits are required before loading, or if blank, you can set to ```autoload``` for record creation. If there are errors, you can correct records in this Bulkloading Table prior to autoloading. 
  
  Note: Permission to access this table is different than Step 1.
  
