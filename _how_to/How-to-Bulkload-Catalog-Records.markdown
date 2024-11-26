@@ -73,7 +73,7 @@ For information about required data and individual fields, see [How To Enter Dat
 ## Step 1: Staging Table    
 
 On the bulkloading page, read through the steps and etiquette, and scroll to the bottom of the page. You will either see a table with user information indicating that the staging table is in use or you will see the message "Upload a comma-delimited text file (csv)" with the Browse and Upload buttons.
-* The Staging Table is a shared resource that can only be accessed by one user at a time. If the Staging Table is in use the Browse and Upload buttons will not be available.
+* The Staging Table is a shared resource that can only be accessed by one user at a time. If the Staging Table is in use, then the Browse and Upload buttons will **not** be available.
 * Instead the name and contact information of the user will be shown and will remain there until it is free and available. If you forget to delete your data from the staging table, you may end up getting some emails from other institutions asking when you will be done.
 
 Please read the *Staging Table etiquette* on the upload form. 
