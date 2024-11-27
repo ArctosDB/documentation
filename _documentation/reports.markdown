@@ -96,6 +96,13 @@ SQL Input variables must be enclosed in hash marks, like "#table_name#".  (CFML 
 
 Many functions exist in Arctos. These can be used to simplify SQL, filter results, or package data in expected and portable formats. These may be viewed in the DDL repository.
 
+### Recommendations
+
+* Start with a plan; do not write reactive SQL.
+* Limit SQL to data; do not mix layout or formatting with data.
+* Modularize; if you're going to do *someThing* across many reports, write or request a function (or you **will** end up with inconsistent data).
+
+
 ### Special Note
 
 Loan metadata/header data is relatively normalized and less-than-trivial to query, so a CF Custom Tag is available. 
