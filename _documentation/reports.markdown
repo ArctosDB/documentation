@@ -72,8 +72,8 @@ Two roles are required to fully access reports.
 
 ![](https://raw.githubusercontent.com/ArctosDB/documentation-wiki/gh-pages/tutorial_images/Bear%20Work%20in%20Progress.JPG)
 
-NOTE: This process is ongoing, rules are temporarily relaxed while development and optimization proceeds.
-
+> [!NOTE]  
+> This process is ongoing, rules are temporarily relaxed while development and optimization proceeds.
 
 The ``write_sql`` role is required to write SQL; please also consider asking a DBA to craft SQL for you. The following are the most basic considerations for this role.
 
@@ -168,7 +168,9 @@ Paged.js provides header and footer functionality, but is extremely twitchy. Fix
 
 ![](https://raw.githubusercontent.com/ArctosDB/documentation-wiki/gh-pages/tutorial_images/Bear%20Work%20in%20Progress.JPG)
 
-NOTE: This process is ongoing, rules are temporarily relaxed while development and optimization proceeds.
+> [!NOTE]  
+> This process is ongoing, rules are temporarily relaxed while development and optimization proceeds.
+
 
 SQL is more-controlled that other report content; only users with ``write_sql`` role may edit SQL.
 
