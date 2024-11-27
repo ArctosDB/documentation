@@ -70,6 +70,11 @@ Two roles are required to fully access reports.
 
 ### Access
 
+![](https://raw.githubusercontent.com/ArctosDB/documentation-wiki/gh-pages/tutorial_images/Bear%20Work%20in%20Progress.JPG)
+
+NOTE: This process is ongoing, rules are temporarily relaxed while development and optimization proceeds.
+
+
 The ``write_sql`` role is required to write SQL; please also consider asking a DBA to craft SQL for you. The following are the most basic considerations for this role.
 
 * **Do not** ****ever**** under any circumstances run SQL against the production database until it has been tested, sanitized, and optimized in test.
@@ -160,6 +165,8 @@ We recommend CSS for layout. In general, keep it simple: Various browsers have s
 Paged.js provides header and footer functionality, but is extremely twitchy. Fixed-size layouts and precalculated headers and footers tend to work much better than the alternatives. (And please let us know if you have a better solution, or need more JS/CSS libraries.)
 
 #### SQL
+
+![](https://raw.githubusercontent.com/ArctosDB/documentation-wiki/gh-pages/tutorial_images/Bear%20Work%20in%20Progress.JPG)
 
 NOTE: This process is ongoing, rules are temporarily relaxed while development and optimization proceeds.
 
