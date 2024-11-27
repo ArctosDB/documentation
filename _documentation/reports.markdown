@@ -68,7 +68,7 @@ Two roles are required to fully access reports.
 
 ## Getting Data
 
-### Access
+### write_sql
 
 ![](https://raw.githubusercontent.com/ArctosDB/documentation-wiki/gh-pages/tutorial_images/Bear%20Work%20in%20Progress.JPG)
 
@@ -77,13 +77,13 @@ Two roles are required to fully access reports.
 
 The ``write_sql`` role is required to write SQL; please also consider asking a DBA to craft SQL for you. The following are the most basic considerations for this role.
 
-* **Do not** ****ever**** under any circumstances run SQL against the production database until it has been tested, sanitized, and optimized in test.
+* **Do not** ***ever*** under any circumstances run SQL against the production database until it has been tested, sanitized, and optimized in test.
 * All sql must have a limit statement, and this should be thoroughly tested. (If test is happy prod probably will be too.)
 * Arctos is generally resource-limited and SQL must be crafted to be efficient; note that valid != efficient. If a SQL statment takes more than ~10 seconds to complete, it's probably unacceptably inefficient (or unlimited and about to melt the front end). 
 * Most report data can be drawn from FLAT; please do so to avoid processing costs when possible, and please consider filing an issue if some 'normal' data isn't available from flat.
 
 
-#### Dialct
+#### Dialect
 
 The database is PostgreSQL.
 
