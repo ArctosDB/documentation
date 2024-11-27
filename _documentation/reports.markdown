@@ -60,16 +60,33 @@ Note that 1 is always an acceptable list length, and is most common for things l
 
 Reports may be edited in the browser fields, but it is often better to use a more specialized editor, and copy to the browser. We use sublime with postgresql and cfml packages; many, many other choices are available.
 
+## Access
+
+Two roles are required to fully access reports.
+* coldfusion_user users may do everything except write SQL. 
+* write_sql is required to query the database. See below for more information.
+
 ## Getting Data
 
-### SQL
- 
-PostgreSQL-flavored SQL is the primary mechanism to retrieve data from the database. 
+### Access
+
+The ``write_sql`` role is required to write SQL; please also consider asking a DBA to craft SQL for you. The following are the most basic considerations for this role.
+
+* **Do not** ****ever**** under any circumstances run SQL against the production database until it has been tested, sanitized, and optimized in test.
+* All sql must have a limit statement, and this should be thoroughly tested. (If test is happy prod probably will be too.)
+* Arctos is generally resource-limited and SQL must be crafted to be efficient; note that valid != efficient. If a SQL statment takes more than ~10 seconds to complete, it's probably unacceptably inefficient (or unlimited and about to melt the front end). 
+* Most report data can be drawn from FLAT; please do so to avoid processing costs when possible, and please consider filing an issue if some 'normal' data isn't available from flat.
+
+
+#### Dialct
+
+The database is PostgreSQL.
 
 #### Variables
-SQL Input variables must be enclosed in hash marks, like "#table_name#".
 
-### Functions
+SQL Input variables must be enclosed in hash marks, like "#table_name#".  (CFML will magic them back into object names.)
+
+#### Functions
 
 Many functions exist in Arctos. These can be used to simplify SQL, filter results, or package data in expected and portable formats. These may be viewed in the DDL repository.
 
@@ -84,9 +101,9 @@ Loan metadata/header data is relatively normalized and less-than-trivial to quer
 will return a data object under variable ``getLoan`` for any report for which ``loan.transaction_id`` is available.
 
 
-### Tables
+#### Tables
 
-Table structure is available from the Arctos Table Browser. Cache tables FLAT (restricted access, unfiltered data) and FILTERED_FLAT (unrestricted access, filtered data) are often good easy to use sources of data, but do have limitations. Talk to your friendly local DBA if you have any questions. You may get a list of FLAT columns by entering "select * from flat where 1=2" in reports/writeSQL.
+Table structure is available from the Arctos Table Browser. Cache tables FLAT (restricted access, unfiltered data) and FILTERED_FLAT (unrestricted access, filtered data) are often good easy to use sources of data, but do have limitations. Talk to your friendly local DBA if you have any questions.
 
 ## Backups
 
@@ -150,14 +167,6 @@ SQL is more-controlled that other report content; only users with ``write_sql`` 
 
 The report_sql query returns a CFML query object ("table") named ``d``.
 
-Considerations for SQL
-
-* Consider simply asking a DBA to help get what you need; we're happy to help, have the tools to do so efficiently, and can help avoid the many pitfalls of directly interacting with a complex multi-user database.
-* **Do not** ****ever**** under any circumstances run SQL against the production database until it has been tested, sanitized, and optimized in test.
-* All sql must have a limit statement, and this should be thoroughly tested. (If test is happy prod probably will be too.)
-* Arctos is generally resource-limited and SQL must be crafted to be efficient; note that valid != efficient. If a SQL statment takes more than ~10 seconds to complete, it's probably unacceptably inefficient (or unlimited and about to melt the front end).
-* Most report data can be drawn from FLAT; please do so to avoid processing costs when possible, and please consider filing an issue if some 'normal' data isn't available from flat.
-
 #### Debug
 
 ````
@@ -166,7 +175,7 @@ Considerations for SQL
 </cfif>
 ````
 
-will dump the object ``d`` - in this case the query we just performed - when the 'open+debug' option is selected (or ``debug`` is manually set to ``true``).
+will dump the object ``d`` returned by the code in report_sql when the 'open+debug' option is selected (or ``debug`` is manually set to ``true``).
 
 
 #### Comment
