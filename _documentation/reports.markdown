@@ -60,13 +60,14 @@ Note that 1 is always an acceptable list length, and is most common for things l
 
 Reports may be edited in the browser fields, but it is often better to use a more specialized editor, and copy to the browser. We use sublime with postgresql and cfml packages; many, many other choices are available.
 
-## Access
+
+## Getting Data
+
 
 Two roles are required to fully access reports.
 * coldfusion_user users may do everything except write SQL. 
-* write_sql is required to query the database. See below for more information.
+* write_sql is required to query the database.
 
-## Getting Data
 
 ### write_sql
 
@@ -83,19 +84,19 @@ The ``write_sql`` role is required to write SQL; please also consider asking a D
 * Most report data can be drawn from FLAT; please do so to avoid processing costs when possible, and please consider filing an issue if some 'normal' data isn't available from flat.
 
 
-#### Dialect
+### Dialect
 
 The database is PostgreSQL.
 
-#### Variables
+### Variables
 
 SQL Input variables must be enclosed in hash marks, like "#table_name#".  (CFML will magic them back into object names.)
 
-#### Functions
+### Functions
 
 Many functions exist in Arctos. These can be used to simplify SQL, filter results, or package data in expected and portable formats. These may be viewed in the DDL repository.
 
-#### Special Note
+### Special Note
 
 Loan metadata/header data is relatively normalized and less-than-trivial to query, so a CF Custom Tag is available. 
 
@@ -106,7 +107,7 @@ Loan metadata/header data is relatively normalized and less-than-trivial to quer
 will return a data object under variable ``getLoan`` for any report for which ``loan.transaction_id`` is available.
 
 
-#### Tables
+### Tables
 
 Table structure is available from the Arctos Table Browser. Cache tables FLAT (restricted access, unfiltered data) and FILTERED_FLAT (unrestricted access, filtered data) are often good easy to use sources of data, but do have limitations. Talk to your friendly local DBA if you have any questions.
 
