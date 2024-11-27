@@ -155,7 +155,7 @@ Considerations for SQL
 * Consider simply asking a DBA to help get what you need; we're happy to help, have the tools to do so efficiently, and can help avoid the many pitfalls of directly interacting with a complex multi-user database.
 * **Do not** ****ever**** under any circumstances run SQL against the production database until it has been tested, sanitized, and optimized in test.
 * All sql must have a limit statement, and this should be thoroughly tested. (If test is happy prod probably will be too.)
-* Arctos is generally resource-limited and SQL must be crafted to be efficient; note that valid != efficient. If a SQL statment takes more than ~10 seconds to complete, it's probably unacceptably inefficient.
+* Arctos is generally resource-limited and SQL must be crafted to be efficient; note that valid != efficient. If a SQL statment takes more than ~10 seconds to complete, it's probably unacceptably inefficient (or unlimited and about to melt the front end).
 * Most report data can be drawn from FLAT; please do so to avoid processing costs when possible, and please consider filing an issue if some 'normal' data isn't available from flat.
 
 #### Debug
