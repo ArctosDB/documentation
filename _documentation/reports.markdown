@@ -36,7 +36,8 @@ The reporter has the following structure:
 * ``Accepts Variable`` controls what reports are avaiable when printing, and allows report selection to include only reports which work with the current data. Details are provided below.
 * ``Report Description`` should contain enough information for anyone to understand why this report exists and how to use it.
 * ``Used By Collections`` is used to filter and sort. This does not control access; all reports may be used by all collctions.
-* ``Report CFM`` is (sorta) dynamic HTML, with query and processing capability.
+* ``Report SQL`` is used to pull data from the database.
+* ``Report CFM`` is (sorta) dynamic HTML with processing capability.
 * ``Report CSS`` is code that controls the page layout. It's generally better manage separately, but can be included in the cfm section in ``style`` tags as well.
 
 
@@ -141,18 +142,21 @@ We recommend CSS for layout. In general, keep it simple: Various browsers have s
 
 Paged.js provides header and footer functionality, but is extremely twitchy. Fixed-size layouts and precalculated headers and footers tend to work much better than the alternatives. (And please let us know if you have a better solution, or need more JS/CSS libraries.)
 
-#### CFML Query Objects 
+#### SQL
 
+NOTE: This process is ongoing, rules are temporarily relaxed while development and optimization proceeds.
 
-````
-<cfquery name="d" datasource="user_login" username="#session.dbuser#" password="#decrypt(session.epw,session.sessionKey,'AES/CBC/PKCS5Padding','hex')#">
-	select field_name from table_name where key=<cfqueryparam value="#transaction_id#" SQLType="int"> 
-</cfquery>
-````
+SQL is more-controlled that other report content; only users with ``write_sql`` role may edit SQL.
 
-*  name="d" - return a query object in variable ``d``
-* ``username="#session.dbuser#" password="#decrypt(session.epw,session.sessionKey,'AES/CBC/PKCS5Padding','hex')#"`` - authentication based off of your Arctos login. Messing with this can cause accounts to be locked.
-* ``<cfqueryparam value="#transaction_id#" SQLType="int">`` - please use cfqueryparam rather than bare variables in queries. Sending unsanitized SQL to the database makes the DBA team nervous, and can cause accounts to be locked.
+The report_sql query returns a CFML query object ("table") named ``d``.
+
+Considerations for SQL
+
+* Consider simply asking a DBA to help get what you need; we're happy to help, have the tools to do so efficiently, and can help avoid the many pitfalls of directly interacting with a complex multi-user database.
+* **Do not** ****ever**** under any circumstances run SQL against the production database until it has been tested, sanitized, and optimized in test.
+* All sql must have a limit statement, and this should be thoroughly tested. (If test is happy prod probably will be too.)
+* Arctos is generally resource-limited and SQL must be crafted to be efficient; note that valid != efficient. If a SQL statment takes more than ~10 seconds to complete, it's probably unacceptably inefficient.
+* Most report data can be drawn from FLAT; please do so to avoid processing costs when possible, and please consider filing an issue if some 'normal' data isn't available from flat.
 
 #### Debug
 
