@@ -319,14 +319,9 @@ this information as well.
 
 ## Georeference Source
 
-`Locality . GEOREFERENCE_SOURCE VARCHAR(255) not null`
-
-[`ctGEOREFERENCE_SOURCE`](http://arctos.database.museum/info/ctDocumentation.cfm?table=ctGEOREFERENCE_SOURCE "Georefrence Source")
-
-`DarwinCore2=GeoreferenceSources`
 
 
- refers to the source(s) of the coordinates and not
+Recorded as a [Locality Attribute](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctlocality_attribute_type#georeference_source), refers to the source(s) of the coordinates and not
 to the source of the error. Coordinates may be original data collected
 with the cataloged item, or they may be provided by after-the-fact
 georeferencing efforts. In the latter situation, data in Source(s)
@@ -431,15 +426,29 @@ the method referred to in [Georeference Method](#georefmethod).
 
 
 
-## WKT Polygon
+## Primary Spatial Data
 
- provides for a [well-known
-text](https://en.wikipedia.org/wiki/Well-known_text) shape associated
-with locality data.
+All spatially-aware localities have both point-radius and polygon data available. primary_spatial_data indicates wheich is provided; the other is generated. 
 
-# Service-Derived Data
 
-Locality data are pulled from various sources and used in various ways. The most visible of these are "place terms" which may be searched in the catalog record Locality pane, and a summary of which is displayed as "Standardized Place Name" on Catalog Record Detail (GUID) pages. These data provide a mechanism by which all records at or near a point may be discovered by a single search term, regardless of often-inconsistent Curatorial assertions.
+## Place Terms
+
+Place Terms is a search-optimized cache of locality-adjacent data, primarily supporting localities which are referenced from filtered_flat (that is, used, primary, and unencumbered). These data are deeply cached and may be weeks out of date, but still generally serve as the most effective way of locating records by place. (Curatorial data are notoriously inconsistent.) As of this writing, place_terms contains the following data.
+
+| Source | Explanation |
+|---|---|
+| geography | Term from geography chosen/asserted by the collection. |
+| locality | Term from locality chosen/asserted by the collection. |
+| locality attribute |  Term from "locality-adjacent" attribute chosen/asserted by the collection. |
+| geography metadata | Term from metadata ("search terms") of geography chosen/asserted by the collection. |
+| spatial intersection |  Term from spatial data which intersects the coordinates or polygon provided (as Locality) by the collection. |
+| geolocate |  Term from spatial data which intersects the coordinates returned by the geoLocate API. |
+
+
+### More about GeoLocate
+
+Geolocate coordinates are derived from asserted geography, locality, and event data, using a relatively complicated algorithm in an attempt to avoid known pitfalls. Wildly incorrect results are almost always related to not following the guidance for specific locality (above), or rarely through incorrect (often outdated) geography choices. Despite some generally-obvious errors (which provide a mechanism to locate improvable data), geoLocate provides the single most consistent method of locating records by place names. GeoLocate data are also used when a collection activates the georeference [bot](https://handbook.arctosdb.org/documentation/bot.html).
+
 
 # Edit Locality Form
 
