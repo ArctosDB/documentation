@@ -433,7 +433,7 @@ All spatially-aware localities have both point-radius and polygon data available
 
 ## Place Terms
 
-Place Terms is a search-optimized cache of locality-adjacent data, primarily supporting localities which are referenced from filtered_flat (that is, used, primary, and unencumbered). These data are deeply cached and may be weeks out of date, but still generally serve as the most effective way of locating records by place. (Curatorial data are notoriously inconsistent.) As of this writing, place_terms contains the following data.
+Place Terms is a search-optimized cache of locality-adjacent data, primarily supporting localities which are referenced from filtered_flat. (That is: used, primary, and unencumbered) These data are deeply cached and may be weeks out of date, but still generally serve as the most effective way of locating records by place. (Curatorial data are notoriously inconsistent.) As of this writing, place_terms contains the following data.
 
 | Source | Explanation |
 |---|---|
@@ -447,7 +447,7 @@ Place Terms is a search-optimized cache of locality-adjacent data, primarily sup
 
 ### More about GeoLocate
 
-Geolocate coordinates are derived from asserted geography, locality, and event data, using a relatively complicated algorithm in an attempt to avoid known pitfalls. Wildly incorrect results are almost always related to not following the guidance for specific locality (above), or rarely through incorrect (often outdated) geography choices. Despite some generally-obvious errors (which provide a mechanism to locate improvable data), geoLocate provides the single most consistent method of locating records by place names. GeoLocate data are also used when a collection activates the georeference [bot](https://handbook.arctosdb.org/documentation/bot.html).
+Geolocate coordinates are derived from asserted geography, locality, and event data, arranged and filtered using a relatively complicated algorithm in an attempt to avoid known pitfalls. Wildly incorrect results are almost always related to not following the guidance for specific locality (above), or rarely through incorrect (often outdated) geography choices. Any errors which cannot be atributd to these sources should be reported to the geoLocate developers. Despite these few generally-obvious errors (which provide a mechanism to locate improvable data), geoLocate provides the single most consistent method of locating records by place names. GeoLocate data are also used when a collection activates the georeference [bot](https://handbook.arctosdb.org/documentation/bot.html).
 
 
 # Edit Locality Form
