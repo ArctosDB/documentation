@@ -6,6 +6,12 @@ layout: default_toc
 
 # Release Notes
 
+## 20241205
+
+* <https://github.com/ArctosDB/dev/issues/124> - split geography continent/odean into two 'fields'
+* <https://github.com/ArctosDB/dev/issues/126> - begin the process of moving spatial data out of 'assertable' place data
+* <https://github.com/ArctosDB/dev/issues/127> - bugfix
+
 ## 20241202
 
 * <https://github.com/ArctosDB/dev/issues/96> - require write_sql role to write sql (but belay final implementation). This will better protect the system while still allowing nearly anyone to change the parts of reports that mostly don't cause system-wide disruptions.
