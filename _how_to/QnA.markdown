@@ -8,6 +8,10 @@ layout: default_toc
 
 # Short how-tos and such from the Arctos development team.
 
+## Locate records by specific classification data
+
+Example: Records in the MVZ:Bird collection which are identified using a name which has term type ``CITES Appendix`` of value ``I`` in source  ``Arctos Legal``: <https://arctos.database.museum/search.cfm?guid_prefix=MVZ%3ABird&tax_trm_1=%3DI&tax_rnk_1=CITES%20Appendix&tax_src_1=Arctos%20Legal>
+
 ## Loan and Shipment Templates
 
 To create a template open the loan create form, fill in whatever you'd like to save - all fields are optional for this - and click Templates. Choose a collection, provide a name, and click save.
