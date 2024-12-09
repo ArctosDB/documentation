@@ -50,7 +50,7 @@ institution_acronym (for Arctos accounting) and the dailies (for everyone's sani
 * TACC storage is considered to be an archive and files should not be unloaded, however, files may be removed by the TACC user who uploaded them.
 
 ## General Recommendations for Naming Files in the Arctos Project Allocation at TACC
-* Follow standard file naming practices such as those in [Arctos Media: Media URI Documentation](documentation/media.html#media-uri). Specifically, name files using ony A-Z, a-z, 0-9, and _ 
+* Follow standard file naming practices in [Arctos Media: Media URI Documentation](/documentation/media.html#media-uri). Specifically, name files using ony A-Z, a-z, 0-9, and _ 
 
 ## Summary
 
