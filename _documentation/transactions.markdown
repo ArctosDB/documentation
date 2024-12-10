@@ -30,7 +30,7 @@ mammals collected during the summer of 2004 in Denali State Park."
 
 ## Public Flag
 
-By default, transactions are internal and only available to the originating collection. Setting this flag to true
+By default, transactions (except identifier/"number") are internal and only available to the originating collection. Setting this flag to true
 makes some transaction data publicly available.
 
 ## Trans Date
