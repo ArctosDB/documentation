@@ -5,7 +5,7 @@ layout: default_toc
 
 # Permits
 
-Permits are any documentation authorizing activity, linked to transactions ([Accessions](/documentation/accession), [Loans](/documentation/loans), and [Borrows](/documentation/borrow)). Permits may be issued by governmental agencies, landowners, registrations (e.g., CITES), etc. Permits may carry any level of authority (including none), and apply to any (or no) context or jurisdiction. 
+Permits are any documentation authorizing activity or guiding usage. Permits are linked to transactions ([Accessions](/documentation/accession), [Loans](/documentation/loans), and [Borrows](/documentation/borrow)). Permits may be "issued by" governmental agencies, landowners, registrations (e.g., CITES), donors, administrators, or anyone else. Permits may carry any level of authority (including none), and apply to any (or no) context or jurisdiction. 
 
 A permit can be linked to any number of transactions, and any number of permits may be liked from a single transaction.
 
@@ -33,6 +33,14 @@ The day on which the permit is no longer valid. This is a DATE datatype, not ISO
 Permit Number or Permit Identifier is an identifying text string. This is often assigned by the agency issuing the
 permit. Permit number is a required field; enter any suitable value which will help in locating the permit when such an 
 identifier has not been provided by the issuer.
+
+## use_condition
+
+Use Condition ([ctuse_condition](http://arctos.database.museum/info/ctDocumentation.cfm?table=ctuse_condition))is a very brief summary of the conditions imposed by a permit, meant to be displayed in various contexts to guide necessary research.
+
+## use_condition_summary 
+
+Use Condition Summary is an elaboration of use_condition; it should sufficiently convey to most users most of the time what the permit requires. (For more complex situations, the permit itself should be consulted.)
 
 ## permit_remarks
 
