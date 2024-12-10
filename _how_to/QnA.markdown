@@ -8,6 +8,32 @@ layout: default_toc
 
 # Short how-tos and such from the Arctos development team.
 
+## Note special use conditions for a record
+
+Find or create an appropriate permit. Note that permits are useful documents which guide or control use; any more-formal interpretation is incorrect.
+
+<img width="838" alt="Screenshot 2024-12-10 at 12 59 08" src="https://github.com/user-attachments/assets/03ccb48a-e1a6-44c3-8603-8e96e65d50c7">
+
+Find or create a data loan. Note that data loans are transactions which are attached to select catalog records; any other interpretation is incorrect.
+
+<img width="666" alt="Screenshot 2024-12-10 at 07 07 25" src="https://github.com/user-attachments/assets/a35595d2-99f4-4b2b-962e-fbf39d608bcf">
+
+
+Add the permit to the transaction. (Transactions can carry any number of permits, and permits may be used by any number of transactions; reality need not be as simple as this example.)
+
+
+<img width="268" alt="Screenshot 2024-12-10 at 07 08 14" src="https://github.com/user-attachments/assets/dba4376f-3832-4c7a-ace2-5f69861ed096">
+
+Add the record to the transaction
+
+<img width="243" alt="Screenshot 2024-12-10 at 13 02 37" src="https://github.com/user-attachments/assets/daa7f6b2-9d51-4760-825c-fb497c3042b7">
+
+When interacting with the record (here, having found it in a query to add items to a loan), view the restriction:
+
+<img width="190" alt="Screenshot 2024-12-10 at 13 00 54" src="https://github.com/user-attachments/assets/9a1b87f6-beb7-46a7-a858-ff59ac6c3e26">
+
+
+
 ## Locate records by specific classification data
 
 Example: Records in the MVZ:Bird collection which are identified using a name which has term type ``CITES Appendix`` of value ``I`` in source  ``Arctos Legal``: <https://arctos.database.museum/search.cfm?guid_prefix=MVZ%3ABird&tax_trm_1=%3DI&tax_rnk_1=CITES%20Appendix&tax_src_1=Arctos%20Legal>
