@@ -6,6 +6,18 @@ layout: default_toc
 
 # Release Notes
 
+
+## 20241210
+
+* <https://github.com/ArctosDB/dev/issues/129> - add prevent initial submit to search form, example:
+	* https://arctos.database.museum/search.cfm?cat_num=14 - default bahavior, form immediately searches for passed-in parameters
+	* https://arctos.database.museum/search.cfm?cat_num=14&autosubmit=false - new behavior, form loads with passed-in data filled and highlighted, but does not submit
+* <https://github.com/ArctosDB/dev/issues/121> - new code table for permit use conditions
+* <https://github.com/ArctosDB/dev/issues/122> - new permit structure use condition - serves as a succinct summary of what's required by the permit
+* <https://github.com/ArctosDB/dev/issues/131> - make transaction identifier (eg "loan number") public
+* <https://github.com/ArctosDB/dev/issues/108> - internal update
+
+
 ## 20241205
 
 * <https://github.com/ArctosDB/dev/issues/124> - split geography continent/odean into two 'fields'
