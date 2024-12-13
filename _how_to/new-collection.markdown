@@ -1,5 +1,5 @@
 ---
-title: How To Join Arctos
+title: How To Join Arctos and Request New Collection GUID
 layout: default_toc
 author: DLM, Michelle Koo
 date: 2024-12-08
