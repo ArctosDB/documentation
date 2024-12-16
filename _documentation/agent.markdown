@@ -141,6 +141,20 @@ Some database rules and suggestions exist in an attempt to provide some consiste
   * phone,work phone,fax,mobile phone must be valid phone numbers
   * email,notification email must be email addresses
 
+# Pick
+
+Many inputs (such as the record bulkloader) accept Agents as strings, and the database then attempts to resolve those strings to existing Agents using the following pathway.
+
+Note: Agents marked 'bad duplicate of' are generally excluded from selection.
+
+1. Case-insensitive full login name. These are unique within Arctos; a match of a login name will be selected, even if the string is used for other purposes. Example: ``dlm``
+2. AgentID. These are GUIDs which provide an unambiguous reference. Example: ``https://arctos.database.museum/agent/2072``
+3. Controlled-type purpose=identifier [attributes](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctagent_attribute_type) *should be* GUIDs which provide an unambiguous reference. Example: ``https://orcid.org/0000-0002-4848-5938``
+4. Preferred Agent Name. These are nonunique personal identifiers, only a 1:1 match will be selected. There are many unexpected formats and duplicates within Arctos. Note that there are ~30,000 living people named 'James Smith'; blindly accepting that the one in Arctos is the one you're looking for is not recommended.
+5. Purpose=name [attributes](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctagent_attribute_type) - some of these have been crafted to serve as selectors in certain situations.
+
+Note that an 'invalid agent' message can result from, for example, zero or many "Preferred Agent Name" matches, and as mentioned above one match (which will result in a successful link) is no guarantee of the correct Agent being chosen. We recommend using only unambiguous identifiers.
+
 # How To
 
 Instructions for doing specifc tasks related to Agents in Arctos
