@@ -7,6 +7,35 @@ date: 2023-01-15
 
 [Add to current update request](https://github.com/ArctosDB/documentation-wiki/issues/275)
 
+
+# Geography
+
+Geography has been defined (https://github.com/ArctosDB/internal/issues/366) in Arctos to reflect the administrative nature of asserted geography data. For example, many marine-focused collections wish to assert both marine (where the event took place) and terrestrial (eg perhaps the adjacent land from which permits are issued) geography for various reasons, while there is little or no overlap in spatial definitions of these places.
+
+## Creation Guidelines
+
+(Geography should not be created or modified until the Arctos Geography Committee has established guidelines and updated this document.)
+
+# Spatial
+
+Spatial data are maintained separately from geography, and may be used to failitate search or suggest spatial affiliation.
+
+
+![](https://raw.githubusercontent.com/ArctosDB/documentation-wiki/gh-pages/tutorial_images/Bear%20Work%20in%20Progress.JPG)
+
+
+# ---------------------------------------------------------
+# ----------------------------------------------------------
+# Important: Everything below this line is outdated and wrong
+
+I'm temporarily leaving this here because it might be a handy reference for building the new
+
+
+# Important: Everything below this line is outdated and wrong
+# ---------------------------------------------------------
+# ----------------------------------------------------------
+
+
 # Higher Geography
 
 Higher Geography is "assertable" spatial geography and will be limited to:
@@ -73,7 +102,6 @@ Continents are not assertable geography. If the only locality information availa
 # Community Discussion
 * [GitHub Issue #275](https://github.com/ArctosDB/documentation-wiki/issues/275)
 
-![](https://raw.githubusercontent.com/ArctosDB/documentation-wiki/gh-pages/tutorial_images/Bear%20Work%20in%20Progress.JPG)
 
 **Suggest removing everything below except guideline stuff and some might be useful for eventual locality attributes**
 
