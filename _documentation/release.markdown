@@ -6,6 +6,12 @@ layout: default_toc
 
 # Release Notes
 
+## 20241216
+
+* <https://github.com/ArctosDB/dev/issues/128> - continue separation of spatial and administrative data
+* <https://github.com/ArctosDB/dev/issues/132> - bugfix
+
+
 ## 20241211
 
 * <https://github.com/ArctosDB/dev/issues/133> - bugfix (?!) involving transaction/record intersection permissions
