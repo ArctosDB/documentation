@@ -5,9 +5,6 @@ author: Dusty McDonald, Teresa J. Mayfield-Meyer
 date: 2023-01-15
 ---
 
-[Add to current update request](https://github.com/ArctosDB/documentation-wiki/issues/275)
-
-
 # Geography
 
 Geography has been defined (https://github.com/ArctosDB/internal/issues/366) in Arctos to reflect the administrative nature of asserted geography data. For example, many marine-focused collections wish to assert both marine (where the event took place) and terrestrial (eg perhaps the adjacent land from which permits are issued) geography for various reasons, while there is little or no overlap in spatial definitions of these places.
