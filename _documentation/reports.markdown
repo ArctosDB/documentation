@@ -11,6 +11,75 @@ layout: default_toc
 
 Arctos has a built-in user-customizable reporter. It's pretty great.
 
+# Access
+
+
+![](https://raw.githubusercontent.com/ArctosDB/documentation-wiki/gh-pages/tutorial_images/Bear%20Work%20in%20Progress.JPG)
+
+> [!NOTE]  
+> This process is ongoing, rules are temporarily relaxed while development and optimization proceeds.
+
+There are three levels of access.
+
+## coldfusion_user
+
+All Operators can print reports.
+
+## write_report
+
+Special permissions are required to create and edit reports. Development in test is highly encouraged (an infinite loop might be disruptive) but not strictly required. Users should understand the shared nature of reports and be conscientious of creating good and frequent backups. 
+
+## write_sql
+
+Operators with write_sql can establish connections directly to the database. This is a very dangerous level of access, and the following rules must be strictly followed. 
+
+Note that DBAs are happy to help with data retrieval, and (once the data of interest are identified) this is generally a very quick process (minutes). 
+
+The following are the most basic considerations for this role.
+
+* **Do not** ***ever*** under any circumstances run SQL against the production database until it has been tested, sanitized, and optimized in test.
+* All sql must have a limit statement, and this should be thoroughly tested. (If test is happy prod probably will be too.)
+* Arctos is generally resource-limited and SQL must be crafted to be efficient; note that valid != efficient. If a SQL statment takes more than ~10 seconds to complete, it's probably unacceptably inefficient (or unlimited and about to melt the front end). 
+* Most report data can be drawn from FLAT; please do so to avoid processing costs when possible, and please consider filing an issue if some 'normal' data isn't available from flat.
+
+
+
+### Dialect
+
+The database is PostgreSQL.
+
+### Variables
+
+SQL Input variables must be enclosed in hash marks, like "#table_name#".  (CFML will magic them back into object names.)
+
+### Functions
+
+Many functions exist in Arctos. These can be used to simplify SQL, filter results, or package data in expected and portable formats. These may be viewed in the DDL repository.
+
+
+### Special Note
+
+Loan metadata/header data is relatively normalized and less-than-trivial to query, so a CF Custom Tag is available. 
+
+```<cf_getLoanFormInfo>```
+
+will return a data object under variable ``getLoan`` for any report for which ``loan.transaction_id`` is available.
+
+
+### Recommendations
+
+* Start with a plan; do not write reactive SQL.
+* Limit SQL to data; do not mix layout or formatting with data.
+* Modularize; if you're going to do *someThing* across many reports, write or request a function (or you **will** end up with inconsistent data).
+
+
+
+### Tables
+
+Table structure is available from the Arctos Table Browser. Cache tables FLAT (restricted access, unfiltered data) and FILTERED_FLAT (unrestricted access, filtered data) are often good easy to use sources of data, but do have limitations. Talk to your friendly local DBA if you have any questions.
+
+
+
 ## Language
 
 The reporter uses CFML, HTML, and CSS, generally to produce PDF's through a browsers print-to-PDF functionality. Extensive documentation for each of these languages is widely available.
@@ -61,62 +130,7 @@ Note that 1 is always an acceptable list length, and is most common for things l
 Reports may be edited in the browser fields, but it is often better to use a more specialized editor, and copy to the browser. We use sublime with postgresql and cfml packages; many, many other choices are available.
 
 
-## Getting Data
 
-
-Two roles are required to fully access reports.
-* coldfusion_user users may do everything except write SQL. 
-* write_sql is required to query the database.
-
-
-### write_sql
-
-![](https://raw.githubusercontent.com/ArctosDB/documentation-wiki/gh-pages/tutorial_images/Bear%20Work%20in%20Progress.JPG)
-
-> [!NOTE]  
-> This process is ongoing, rules are temporarily relaxed while development and optimization proceeds.
-
-The ``write_sql`` role is required to write SQL; please also consider asking a DBA to craft SQL for you. The following are the most basic considerations for this role.
-
-* **Do not** ***ever*** under any circumstances run SQL against the production database until it has been tested, sanitized, and optimized in test.
-* All sql must have a limit statement, and this should be thoroughly tested. (If test is happy prod probably will be too.)
-* Arctos is generally resource-limited and SQL must be crafted to be efficient; note that valid != efficient. If a SQL statment takes more than ~10 seconds to complete, it's probably unacceptably inefficient (or unlimited and about to melt the front end). 
-* Most report data can be drawn from FLAT; please do so to avoid processing costs when possible, and please consider filing an issue if some 'normal' data isn't available from flat.
-
-
-### Dialect
-
-The database is PostgreSQL.
-
-### Variables
-
-SQL Input variables must be enclosed in hash marks, like "#table_name#".  (CFML will magic them back into object names.)
-
-### Functions
-
-Many functions exist in Arctos. These can be used to simplify SQL, filter results, or package data in expected and portable formats. These may be viewed in the DDL repository.
-
-### Recommendations
-
-* Start with a plan; do not write reactive SQL.
-* Limit SQL to data; do not mix layout or formatting with data.
-* Modularize; if you're going to do *someThing* across many reports, write or request a function (or you **will** end up with inconsistent data).
-
-
-### Special Note
-
-Loan metadata/header data is relatively normalized and less-than-trivial to query, so a CF Custom Tag is available. 
-
-````
-<cf_getLoanFormInfo>
-````
-
-will return a data object under variable ``getLoan`` for any report for which ``loan.transaction_id`` is available.
-
-
-### Tables
-
-Table structure is available from the Arctos Table Browser. Cache tables FLAT (restricted access, unfiltered data) and FILTERED_FLAT (unrestricted access, filtered data) are often good easy to use sources of data, but do have limitations. Talk to your friendly local DBA if you have any questions.
 
 ## Backups
 
