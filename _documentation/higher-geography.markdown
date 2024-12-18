@@ -9,6 +9,83 @@ date: 2023-01-15
 
 Geography has been defined (https://github.com/ArctosDB/internal/issues/366) in Arctos to reflect the administrative nature of asserted geography data. For example, many marine-focused collections wish to assert both marine (where the event took place) and terrestrial (eg perhaps the adjacent land from which permits are issued) geography for various reasons, while there is little or no overlap in spatial definitions of these places.
 
+## Structure
+
+### geog_auth_rec_id
+
+Primary key, internal, not stable.
+
+### continent
+
+(Awaiting definition by the Arctos Geography Committee)
+
+### ocean
+
+(Awaiting definition by the Arctos Geography Committee)
+
+
+### sea
+
+(Awaiting definition by the Arctos Geography Committee)
+
+
+### country
+
+(Awaiting definition by the Arctos Geography Committee)
+
+
+### state_prov
+
+(Awaiting definition by the Arctos Geography Committee)
+
+
+### county
+
+(Awaiting definition by the Arctos Geography Committee)
+
+
+### quad
+
+(Awaiting definition by the Arctos Geography Committee)
+
+
+### feature
+
+References [ctfeature](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctfeature)
+
+(Awaiting definition by the Arctos Geography Committee)
+
+
+### island_group
+
+References [ctisland_group](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctisland_group)
+
+(Awaiting definition by the Arctos Geography Committee)
+
+
+### island
+
+(Awaiting definition by the Arctos Geography Committee)
+
+
+### source_authority
+
+(Awaiting definition by the Arctos Geography Committee)
+
+
+### geog_remark
+
+(Awaiting definition by the Arctos Geography Committee)
+
+
+### higher_geog
+
+Generated concatenation of comma-sepated terms (in the order above, as of this writing). Serves as a (unique) 'handle' for the data object; what's entered during data entry.
+
+
+
+
+
 ## Creation Guidelines
 
 (Geography should not be created or modified until the Arctos Geography Committee has established guidelines and updated this document.)
