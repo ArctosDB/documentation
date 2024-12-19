@@ -1,8 +1,8 @@
 ---
 title: Higher Geography
 layout: default_toc
-author: Dusty McDonald, Teresa J. Mayfield-Meyer
-date: 2023-01-15
+author: Dusty McDonald
+date: 2024-12-15
 ---
 
 
