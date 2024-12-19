@@ -6,6 +6,14 @@ layout: default_toc
 
 # Release Notes
 
+## 20241218
+
+* <https://github.com/ArctosDB/dev/issues/136> - bugfix
+* <https://github.com/ArctosDB/dev/issues/137> - continue separation of spatial and administrative geography data
+* <https://github.com/ArctosDB/dev/issues/138> - bugfix and data cleanup
+* <https://github.com/ArctosDB/dev/issues/120> - cleanup
+* <https://github.com/ArctosDB/dev/issues/135> - new role write_report to better protect reports
+
 ## 20241216
 
 * <https://github.com/ArctosDB/dev/issues/128> - continue separation of spatial and administrative data
