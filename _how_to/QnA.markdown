@@ -8,6 +8,27 @@ layout: default_toc
 
 # Short how-tos and such from the Arctos development team.
 
+## Manage collection-specific code table values
+
+From manage collection, (in the Collection Defaults section)...
+
+<img width="538" alt="Screenshot 2025-01-02 at 15 40 44" src="https://github.com/user-attachments/assets/5e2393ce-4359-4d27-b0da-66007831ef43" />
+
+... or from a code table (example:  <https://arctos.database.museum/info/ctDocumentation.cfm?table=ctattribute_type>), click the collection settings button:
+
+<img width="176" alt="Screenshot 2025-01-02 at 15 39 02" src="https://github.com/user-attachments/assets/3c35ae39-6de0-4035-8db1-bbc4af2fb6b8" />
+
+Choose a collection:
+
+
+<img width="243" alt="Screenshot 2025-01-02 at 15 39 27" src="https://github.com/user-attachments/assets/dc34899b-5895-4661-b541-557eeb29b955" />
+
+Then select values and save:
+
+<img width="192" alt="Screenshot 2025-01-02 at 15 39 54" src="https://github.com/user-attachments/assets/e4fc9139-e6a2-4b68-a7c0-b79bef1f796d" />
+
+
+
 ## Note special use conditions for a record
 
 Find or create an appropriate permit. Note that permits are useful documents which guide or control use; any more-formal interpretation is incorrect.
