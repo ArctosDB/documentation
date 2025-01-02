@@ -10,7 +10,7 @@ layout: default_toc
 
 ## Manage collection-specific code table values
 
-From manage collection, (in the Collection Defaults section)...
+Many authorities allow collection-specific usage, which may be controlled by Operators with manage_collection access. From manage collection, (in the Collection Defaults section)...
 
 <img width="538" alt="Screenshot 2025-01-02 at 15 40 44" src="https://github.com/user-attachments/assets/5e2393ce-4359-4d27-b0da-66007831ef43" />
 
