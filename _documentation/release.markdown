@@ -6,6 +6,17 @@ layout: default_toc
 
 # Release Notes
 
+
+## 20250102
+
+* <https://github.com/ArctosDB/dev/issues/141> - clarify documentation
+* <https://github.com/ArctosDB/dev/issues/139> - identification loader bugfix
+* <https://github.com/ArctosDB/dev/issues/140> - update/version component loader template with identifiers doc link
+* <https://github.com/ArctosDB/dev/issues/113> - add 'no coordinates' report
+* <https://github.com/ArctosDB/dev/issues/139> - bugfix
+* <https://github.com/ArctosDB/dev/issues/37> - saved search and archive create UI
+* <https://github.com/ArctosDB/dev/issues/116> - update inline documentation
+
 ## 20241218
 
 * <https://github.com/ArctosDB/dev/issues/136> - bugfix
@@ -51,3 +62,5 @@ layout: default_toc
 ## Edit this Documentation
 
 If you see something that needs to be edited in this document, you can create an issue using the link under the search widget at the top left side of this page, or you can edit directly <a href="https://github.com/ArctosDB/documentation-wiki/edit/gh-pages/_documentation/release.markdown" target="_blank">here</a>.
+
+
