@@ -60,12 +60,12 @@ The community recommends following condition ratings be used specifically to par
 
 Note that there are many part attributes that may confirm or conflict with the information in condition. These include, but are not limited to:
 
-1. [condition report](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctspecpart_attribute_type#condition_report) is basically condition, but without the structural limitations (eg you can fully expose how things change over time) and with full metadata
-2. [preservation](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctspecpart_attribute_type#preservation)
-3. [preservation need](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctspecpart_attribute_type#preservation_need)
-4. [remaining volume](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctspecpart_attribute_type#remaining_volume)
-5. [storage temperature](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctspecpart_attribute_type#storage_temperature)
-6. [tissue quality](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctspecpart_attribute_type#tissue_quality) 
+1. [condition report](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctpart_attribute_type#condition_report) is basically condition, but without the structural limitations (eg you can fully expose how things change over time) and with full metadata
+2. [preservation](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctpart_attribute_type#preservation)
+3. [preservation need](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctpart_attribute_type#preservation_need)
+4. [remaining volume](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctpart_attribute_type#remaining_volume)
+5. [storage temperature](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctpart_attribute_type#storage_temperature)
+6. [tissue quality](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctpart_attribute_type#tissue_quality) 
 
 ## Lot Count
 

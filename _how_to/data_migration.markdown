@@ -114,7 +114,7 @@ Part names (object descriptions) must match to the available [Part: Names](https
 
 ### Part Attributes
 
-Parts may be associated with many part attributes and the attribute type must match a term in [Part: Attribute Types](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctspecpart_attribute_type) in Arctos. It is preferable to use part attributes rather than placing this information in part remark so that the data is more discoverable.
+Parts may be associated with many part attributes and the attribute type must match a term in [Part: Attribute Types](https://arctos.database.museum/info/ctDocumentation.cfm?table=ctpart_attribute_type) in Arctos. It is preferable to use part attributes rather than placing this information in part remark so that the data is more discoverable.
 
 If not loaded with the rest of the catalog record, parts may be loaded with the [Part+Attribute Bulkload](https://arctos.database.museum/loaders/BulkloadParts.cfm) tool.
 
