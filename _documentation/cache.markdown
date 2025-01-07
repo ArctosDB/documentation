@@ -7,16 +7,17 @@ layout: default_toc
 
 # Cache
 
-Data are flattened and cached in two tables, FLAT and FILTERED_FLAT. The latter is the former with encumbrances applied.
+Data are flattened and cached in two wide spreadsheet-like tables, FLAT and FILTERED_FLAT. The latter is the former stripped of encumbered, private, internal, and sensitive data.
 
-## Structure and Interpretation
+## Structure
+
 
 <https://docs.google.com/spreadsheets/d/15w_JYNP1w4XeIB6tAZHIxXeA5ea8Ue9BYTVKfQggVUs/edit?gid=0#gid=0>  is a work in progress; file an Issue for assistance.
 
 
 ## Status
 
-Check flat cache in the directory.
+Check flat cache in the directory. (FLAT is less than one minute stale ~99+% of the time, but may occasionally be days or weeks out of date.)
 
 
 ## Edit this Documentation
