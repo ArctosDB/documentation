@@ -129,10 +129,6 @@ including [Part Attributes](/documentation/attributes).
 
 ## Preservation
 
-<div style="margin:1em;padding:1em;border:2px solid red; background-color:rgb(249, 242, 244);">
-NOTE: The definition of Tissue above is being deprecated, and embedded preservation information is being removed from part names. The following will become definitive as the migration is completed.
-</div>
-
 Part Preservation is controlled by a [code table](http://arctos.database.museum/info/ctDocumentation.cfm?table=CTPART_PRESERVATION). Any part may have any number of preservation events, and like all Part Attributes they may include date and determiner information. "Tissueness" is an attribute of preservation.
 
 * A part with no preservation attributes is not a tissue
