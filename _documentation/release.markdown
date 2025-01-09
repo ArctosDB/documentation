@@ -6,14 +6,11 @@ layout: default_toc
 
 # Release Notes
 
-## pending
+## 20250108
 
 * <https://github.com/ArctosDB/dev/issues/143> - add suborder to record search
 * <https://github.com/ArctosDB/dev/issues/118> - rebuild part attributes; modernize, combine terms and datatype controls, add private/public
-* <> - 
-* <> - 
-* <> - 
-* <> - 
+* <https://github.com/ArctosDB/dev/issues/145> - bugfix
 
 
 
