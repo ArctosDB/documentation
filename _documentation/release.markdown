@@ -6,7 +6,12 @@ layout: default_toc
 
 # Release Notes
 
-## 20250108
+## 20250113
+
+* <https://github.com/ArctosDB/dev/issues/144> - optimize
+* <https://github.com/ArctosDB/dev/issues/149> - sanitize
+
+##  20250108
 
 * <https://github.com/ArctosDB/dev/issues/143> - add suborder to record search
 * <https://github.com/ArctosDB/dev/issues/118> - rebuild part attributes; modernize, combine terms and datatype controls, add private/public
