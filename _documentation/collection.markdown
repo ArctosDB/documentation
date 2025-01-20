@@ -168,7 +168,7 @@ Environment-derived metadata.
 
 ## collection_contacts
 
-Collection_Contacts links agents to collections in roles. These are used to direct error logs, messages, and provide metadata in .eml files.
+Collection_Contacts links agents to collections in roles. These are used to direct error logs, messages, and provide metadata in .eml files. Note that contacts are generally only visible for active operators with current addressses.
 
 ### contact_role
 
