@@ -33,6 +33,11 @@ Primary key, internal, not stable.
 (Awaiting definition by the Arctos Geography Committee)
 
 
+### waterbody
+
+(Awaiting definition by the Arctos Geography Committee)
+
+
 ### country
 
 (Awaiting definition by the Arctos Geography Committee)
