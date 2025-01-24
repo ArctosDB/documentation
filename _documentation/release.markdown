@@ -6,6 +6,19 @@ layout: default_toc
 
 # Release Notes
 
+
+## 20250123
+
+* <https://github.com/ArctosDB/dev/issues/39> - add units to container dimensions; rebuild and modernize underlying logic
+* <https://github.com/ArctosDB/dev/issues/164> - prevent more unlicensed and inappropriately-licensed media while working towards a solution
+* <https://github.com/ArctosDB/dev/issues/153> - modernization
+* <https://github.com/ArctosDB/dev/issues/155> - security patch
+* <https://github.com/ArctosDB/dev/issues/151> - bugfix
+* <https://github.com/ArctosDB/dev/issues/154> - bugfix
+* <https://github.com/ArctosDB/dev/issues/157> - bugfix
+
+
+
 ## 20250113
 
 * <https://github.com/ArctosDB/dev/issues/144> - optimize
