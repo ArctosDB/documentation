@@ -9,16 +9,16 @@ Media are any digital objects (such as photographs, sound recordings,
 or three-dimensional renderings of objects) that can be related to data
 items in Arctos. Thus, they are essentially anything that can be
 identified with a Uniform Resource Identifier (URI) and (optionally)
-related to a primary key in a major table ([examples](http://arctosdb.wordpress.com/2011/11/28/what-are-media/)).
+related to a primary key in a major table.
 This arrangement allows us to relate photographs of anatomical features
-to specimens, sound recordings to collecting events, text files to
+to recprds, sound recordings to collecting events, text files to
 agents, and any number of possibilities. A special class of Media
 paginates multi-page documents (*e.g.*, JPG field notebook scans),
-allowing browsing and PDF creation. TAGs identify user-selected areas of
-image media, and further relate these areas to specimens, places, and
-people. Media may be created autonomously, as part of a specimen record,
-or bulkloaded. Additionally, [specialized tools](https://sites.google.com/site/arctosdb/ala/process) exist for
-rapid imaging of herbaria and paleontological collections, including
+allowing book-like browsing. TAGs identify user-selected areas of
+image media, and further relate these areas to records, places, and
+people. Media may be created autonomously, as part of a catalog record,
+or bulkloaded. Additionally, specialized tools have been built to support
+rapid imaging of herbaria and paleontological collections, including capture of
 ancillary data in the form of accession and locality cards. Data about
 media are stored in three tables:
 
@@ -28,9 +28,16 @@ media are stored in three tables:
 
 ## Fields in table Media
 
-### Media URI
+### media_id
 
-`Media . Media_URI VARCHAR2(255) not null`
+Internal primary key, integer.
+
+### MediaID
+
+URI-prefixed media_id serves as a GUID. Example: ``https://arctos.database.museum/media/10727496``
+
+
+### Media_URI
 
 The [Uniform Resource Identifier](http://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
 (URI) that finds the media object on the Internet. (A URL is a common
@@ -46,19 +53,15 @@ roughly three classes:
     this category (although some users employ browser extensions which
     can process these types of files).
 
-Files containing characters other than A-Z, a-z, 0-9, and _ are not eligible for scripting. Please sanitize any file names before uploading.
+> **_NOTE:_** Files containing characters other than A-Z, a-z, 0-9, and _ are not eligible for scripting. Please sanitize any file names before uploading.
 
-### Mime Type
-
-`Media . Mime_Type VARCHAR2(255) not null`
+### Mime_Type
 
 The Internet media type. Consists of a type and subtype, such as
 "text/html." [Code-table](http://arctos.database.museum/info/ctDocumentation.cfm?table=ctmime_type)
 controlled, as described in [Wikipedia](http://en.wikipedia.org/wiki/Mime_type).
 
-### Media Type
-
-`Media . Media_Type VARCHAR2(255) not null`
+### Media_Type
 
 A description of the kind of media. These values are controlled by a
 [code table](http://arctos.database.museum/info/ctDocumentation.cfm?table=ctmedia_type).
@@ -66,47 +69,54 @@ Media Type exists to categorize Media whose MIME type is not
 sufficiently descriptive. A HTML image viewer application would have
 MIME_TYPE of ‘text/html’ and MEDIA_TYPE of ‘image,’ for example.
 
-### Preview URI
-
-`Media . Preview_URI VARCHAR2(255) null`
+### Preview_URI
 
 The Uniform Resource Identifier (URI) for a preview of the Media item. A
 preview might be something like a thumb-nail sized version of a larger
 image.
 
-### Media Relationship
+> **_NOTE:_** Large thumbnails will not display in Arctos UI. Previews should be less than 10KB.
 
-`Media_Relations . Media_Relationship VARCHAR2(40) not null`
+### media_license_id
+
+All Media should have a license, a legal document which guides and controls acceptable usage. Values are controlled by a [code table](http://arctos.database.museum/info/ctDocumentation.cfm?table=ctmedia_license).
+
+> **_NOTE:_** Cleanup in progress!
+
+### media_terms_id
+
+Media may optionally have a terms document, which should serve a purpose such as informing a conscientious user how to best comply with the license.  Values are controlled by a [code table](http://arctos.database.museum/info/ctDocumentation.cfm?table=ctcollection_terms).
+
+## Media Relations
+
+Relationships establish primary-key links between Media and Arctos nodes (including other Media).
+
+
+### media_relationship
 
 The kind of relationship between the media and the data item.
 Relationships are functional and must be comprised of a string
-containing at least one space and ending with a table name. ColdFusion
-and Oracle both rely on this. Values are controlled by a [code table](http://arctos.database.museum/info/ctDocumentation.cfm?table=ctmedia_relationship).
+containing at least one space and ending with a table name. Values are controlled by a [code table](http://arctos.database.museum/info/ctDocumentation.cfm?table=ctmedia_relationship).
 
 ### Created By
-
-`Media_Relations . Created_By_Agent_ID NUMBER(22) not null`
 
 The agent who created the relationship between a media object and a data
 item. This is a foreign key to the [Agent](/documentation/agent) table.
 
-### Related Data Item
 
-`Media_Relations . Related_Primary_Key NUMBER(22) not null`
 
-The data item to which the Media object is related. This is a foreign
-key.
+## Media Labels
 
-### Media Label
+Labels attach text to media objects.
 
-`Media_Labels . Media_Label VARCHAR2(255) not null`
+
+
+### media_label
 
 The subject matter of a label describing a Media object. Values are
 controlled by a [code table](http://arctos.database.museum/info/ctDocumentation.cfm?table=ctmedia_label).
 
-### Label Value
-
-`Media_Labels . Label_Value VARCHAR2(4000) not null`
+### Label_Value
 
 The content of a label. Generally the value is uncontrolled text, with the exception of Media Label = **"Made_Date"**, which requires its values to be in [ISO date format](/documentation/dates) (*e.g.* "2014-05-01" for "1 May 2014"), and will give an error upon saving if not rendered in that format. Try updating the date to the correct format to avoid error messages.
 
@@ -117,14 +127,9 @@ The content of a label. Generally the value is uncontrolled text, with the excep
 The agent who assigned the label. This is a foreign key to the [Agent](/documentation/agent)
 table.
 
-### Checksum
 
-Checksum is a cryptographic hash, or "digital fingerprint," of a file. At a later
-time, another checksum can be generated and compared to the original.
-Matching checksum values provide great certainty that the file has not
-changed. Arctos provides a means to generate an MD5 checksum and save
-this value as a Media Label. Checksum values generated by outside
-sources can be manually entered as Media Labels.
+
+
 
 ## Media Creation Guidelines
 
