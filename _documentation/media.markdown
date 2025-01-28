@@ -226,7 +226,7 @@ To create these, do the following:
     -   <http://some.server.somewhere/some/path/information/folders/whatever/My_Fieldnotes_2.jpg>
 
 
-1. Download the Media Bulkloader template and fill in the blanks, or use the "pull from server" option to build a Media bulkloader template using information embedded in URIs. (This requires some knowledge of Regular Expressions.) Required fields are:
+1. Download the Media Bulkloader template and fill in the blanks. Required fields are:
 
     -   MEDIA_URI – the location to which you uploaded your scans
     -   MIME_TYPE – this must be image/jpeg
@@ -246,26 +246,6 @@ sizes="(max-width: 640px) 100vw, 640px" srcset="../images/classic-uploads/2012/0
 
 Note that with good organization and clever use of your favorite spreadsheet, most of the work should be simple copy/paste/increment.
 
-## Bulkloading Media
-
-This entry describes one process to
-create Media on Arctos. It is not the only method possible, and may not
-be most suitable for any given need. [MVZ](http://mvz.berkeley.edu/) has
-developed specialized procedures to fit their workflow, for example.
-
-1.  Get your Media – the binary objects – to a suitable
-    web-accessible location. We recommend
-    [TACC](http://www.tacc.utexas.edu/), and they’ve provided various
-    tools[\*](#tacc-tools) to facilitate loading data. You may wish to
-    create a preview of your Media at this time – you’ll need to script
-    that, do it manually, or coordinate with whomever is hosting your
-    binary data (*e.g.* TACC).
-2.  Locate related objects in Arctos. The Media Bulkloader cannot handle
-    all relationships, and how relationships are formed is not
-    always intuitive. See the Media Bulkloader for details.
-3.  Populate the Media Bulkloader using the URI you’ve created in
-    loading media, upload the CSV file, and follow the directions until
-    you get a "spiffy" message.
 
 ## Discovery
 
@@ -323,15 +303,6 @@ iDigBio), scientific publications, and researchers' home pages.
 
 Media Keywords are select words and phrases pulled from related objects and Media Labels which exist to facilitate discovery.
 
-## TACC Tools
-
-TACC tools include direct Secure Copy Protocol (SCP) access, a WEBDAV dropbox ([contact
-us](https://arctosdb.org/join-arctos/contacts-support/) for access), and the
-ability to automatically push files uploaded to Arctos to TACC. Additionally there are various wrappers and tools using
-SCP access, such as the [ALA Imaging Project](https://sites.google.com/site/arctosdb/ala/process), which
-pushes DNG files from a local computer to TACC, creates thumbnails and
-high-resolution JPGs, and automatically associates images with barcoded
-specimens).
 
 ## TAGs
 
@@ -348,6 +319,8 @@ brackets around the GUID-string. Example:
 \[\[MVZ:Mamm:184092\]\]
 
 forms a HTML-link to <http://arctos.database.museum/guid/MVZ:Mamm:184092>
+
+> **_NOTE:_**  TAGs also form media relationships for discoverability purposes, see <https://github.com/ArctosDB/arctos/issues/1682>
 
 ## URLs and Stability
 
