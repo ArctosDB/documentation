@@ -6,6 +6,16 @@ layout: default_toc
 
 # Release Notes
 
+## 20250130
+
+
+* <https://github.com/ArctosDB/dev/issues/170> - rebuild manage identification ot use component loader, split move part container to new component loader feeder
+* <https://github.com/ArctosDB/dev/issues/173> - add increment existing functionality to identification tool
+* <https://github.com/ArctosDB/dev/issues/119> - add ``collector.collector_remarks``
+
+
+
+
 ## 20250127
 
 
