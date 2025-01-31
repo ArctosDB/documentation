@@ -6,7 +6,7 @@ layout: default_toc
 ---
 # Component Loaders and Unloaders
 
-#### Navigation: Enter Data > Batch Tools (select a component loader)
+Component Loaders are an ecosystem of tools which asynchronously 
 
 Data can be added to and in some cases removed from existing catalog records from a single flat (non-relational) file, a text file in which all data for an individual concept to be added to or removed from a single cataloged item are in a single row. This file can be created with any convenient client-side application. The file is then loaded into a similarly structured table on the server, and a server-side application (the component loader) parses the columns from each row into the relational structure of the database. The process provides an independent layer of data checking before new information is incorporated into the database proper. Original data that are received in electronic format may require minimal manipulation; you can sometimes merely add the necessary columns to build a file in the component-loading format.
 
@@ -35,6 +35,7 @@ or other attributes. Watch dates and non-integer numbers (such as decimal latitu
 All component loaders include a status field that is NOT part of the component loader template (but you can add it before loading if you like). This field can be NULL or include any text that helps you to organize information in the component loader. There is one special provision for this field:
 
 #### autoload
+
 Entering "autoload" in the status field sets the record to load.
 
 ### Primary Key Warning
@@ -43,7 +44,8 @@ Some values may be replaced by or require primary keys: `locality_id`, `entered_
 
 ## Permissions
 
-An Arctos operator with Data Entry permissions can upload records to a component loader. Arctos operators with Manage Collection can delete and change the status of records in the component loaders (including setting status to autoload)
+Permissions vary across tools. Check Component Loader Status or the Directory for details.
+
 
 ## Processing
 
@@ -53,8 +55,7 @@ Once a component loader record is marked to load by making ``status`` autoload, 
  - an error is returned in the ``status`` column
 
 
- ``Reports/Services>View Statistics>Componnent Loader Status`` will report on current processing.
-
+A Component Loader Status tool will report status, and allow privileged users to change run order.
    
 Records which successfully load must be refreshed in the cache before appearing in the user interfaces. Records are  refreshed in the order they enter the queue. This process often takes less than one minute, but in the case of many thousands of records being queued can take up to several days. ``Reports/Services>View Statistics>FLAT Status`` provides a summary of the state of the cache, and may be useful in estimating processing time.
 
