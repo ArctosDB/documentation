@@ -26,6 +26,10 @@ Arctos disallows characters not in POSIX character class PRINT for most fields, 
 
 Many characters, or combinations of characters, are visually similar. For example, see the [Wikipedia entry on the degree symbol](https://en.wikipedia.org/wiki/Degree_symbol).
 
+## Special Caution
+
+If any encoding erors are encountered, the entire dataset should be considered suspect. Consider running CSV through Google Sheets (or any equally competent converter) and explicitly saving as UTF. This step will not remove errors, but it may make them easier to discover. (ref: <https://github.com/ArctosDB/dev/issues/177>)
+
 # Field Length
 
 Some programs or editors silently truncate text. Arctos never will; some text length limitations exist, and violating them will always result in an error, never string manipulation.
